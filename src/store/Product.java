@@ -1,12 +1,7 @@
 package store;
 
-import java.sql.SQLOutput;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
+
 
 public abstract class Product {
     private LocalDate producedON;
@@ -26,7 +21,7 @@ public abstract class Product {
 
     public boolean isFresh(){
         boolean check;
-        if (findDayOfProducedDate()<+storageLifeDays) {
+        if (findDayOfProducedDate()<storageLifeDays) {
             check = true;
         }else {
             check = false;
